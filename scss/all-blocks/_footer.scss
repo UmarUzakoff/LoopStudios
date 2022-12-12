@@ -1,0 +1,111 @@
+.footer{
+    background-color: $black-color;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__container{
+        @extend.container;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 44px;
+            position: relative;
+
+            &__nav{
+            
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 32px;
+                    padding-inline-start: 0;
+                    
+    
+                    li{
+                        font-size: 15px;
+                        line-height: 25px;
+    
+                        a{
+                            color: $white-color;
+                        }
+                    }
+    
+                    li:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__right{
+            display: flex;
+            flex-direction: column;
+            padding-top: 44px;
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+            }
+
+            p{
+                font-size: 15px;
+                line-height: 25px;
+                color: $white-color;
+                mix-blend-mode: normal;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@media (max-width:450px){
+    .footer{
+
+        &__container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__left{
+                justify-content: center;
+                align-items: center;
+    
+                &__nav{
+                
+                    ul{
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 16px;
+                    }
+                }
+            }
+
+            &__right{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+    
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 16px;
+                }
+    
+                p{
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: $white-color;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
